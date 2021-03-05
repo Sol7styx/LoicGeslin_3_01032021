@@ -1,0 +1,196 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (min-width: 364px) and (max-width: 767px) {
+  .headerlogo {
+    font-family: 'Shrikhand', cursive;
+    font-style: italic;
+    text-align: center;
+    font-size: 2rem;
+  }
+  .location {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #E5E7E9;
+    font-family: 'Roboto', sans-serif;
+  }
+  .booking {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #F2F4F4;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }
+  container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  container h2 {
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.6rem;
+  }
+  .restaurants {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F2F4F4;
+  }
+  .restaurants h2 {
+    padding-left: 12px;
+  }
+  .container ol {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+    counter-reset: number;
+  }
+  .container li {
+    counter-increment: number;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    border-radius: 36px;
+    padding: 16px 0;
+    font-weight: bold;
+  }
+  .container li i {
+    margin: 0 24px;
+    color: #797D7F;
+  }
+  .article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .card {
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto 15px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 20px;
+    height: 300px;
+    position: relative;
+    text-decoration: none;
+  }
+  .card img {
+    width: 100%;
+    height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .restaurants__new {
+    position: absolute;
+    background-color: #99E2D0;
+    border-radius: 5px;
+    height: 2rem;
+    text-decoration: none;
+    right: 10px;
+    top: 10px;
+  }
+  .card__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: white;
+  }
+  .card__righttext {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    font-size: 2rem;
+    padding-right: 20px;
+  }
+  .card__lefttext {
+    text-decoration: none;
+  }
+  .card__lefttext > * {
+    margin: 10px;
+  }
+  .card__lefttext h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  footer {
+    background-color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer__title {
+    font-family: 'Shrikhand', cursive;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-decoration: none;
+  }
+  .footer__icon {
+    color: white;
+    padding-right: 20px;
+  }
+  .footer__text {
+    color: white;
+    text-decoration: none;
+  }
+  .footer li {
+    text-decoration: none;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
