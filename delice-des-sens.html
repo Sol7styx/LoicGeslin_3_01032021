@@ -4,131 +4,152 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">
         <title>ohmyfood!</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/styles.css">
         <script src="https://kit.fontawesome.com/f2b3c10602.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
-        <header>
-            <nav>
-                <a href="index.html"><i class="fas fa-arrow-left"></i></a>
-                <h1 class="header__logo">ohmyfood</h1>
-            </nav>
+        <header class="header header--arrow">
+                <span><a href="index.html"><i class="fas fa-arrow-left header__arrow"></i></a></span>
+                <h1 class="headerlogo">ohmyfood</h1>
         </header>
-        <main class="menu">
+        <main class="menucontent">
             <div class="menu__image">
-                <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="image restaurant la palette du goût">
+                <img class="menuimage" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="image restaurant la palette du goût">
             </div>
-            <article>
-                <div class="menu__container"
-                    <div class="menu__title">
-                        <h2>Le délice des sens</h2>
-                        <button class=menu__btn">
-                            <i class="menu__far fa-heart"></i>
-                            <i class="menu__heart far fa-heart"></i>  
-                        </button> 
-                    </div>
+           
+            <article class="menu container">
+                <div class="menutitle">
+                    <h2>Le délice des sens</h2>
+                    <button class="menubtn">
+                        <i class="menu__far fa-heart fa-2x"></i>
+                        <i class="menu__heart far fa-heart fa-2x"></i>
+                    </button>
+                </div> 
+            </article>
                     <div class="menu__choice">
                         <div class="menu__starters">
                             <h2>Entrées</h2>
-                            <div class="underline"></div> vbv  
+                            <div class="underline"></div> 
                             <div class="menu__details">
-                                <div class="details bloc1">
+                                <div class="detailsbloc1">
                                     <h3>Tartare de thon</h3>
                                     <p>Assaisonné au yuzu</p>
-                                    <span>25€</span>
                                 </div>
-                                <div class="details validation">
-                                    <i class="far fa-check-circle"></i>
+                                <div class="detailsprice">25€</div>
+                                <div class="detailsvalidation">
+                                    <div class="detailsicon">
+                                        <i class="far fa-check-circle"></i>
+                                    </div>
                                 </div>
                             </div>
                             <div class="menu__details">
-                                <div class="détails bloc">
+                                <div class="detailsbloc1">
                                     <h3>Bouchée de homard croustillant</h3>
                                     <p>Et sa farandole de petits légumes</p>
-                                    <span>35€</span>
                                 </div>
-                                <div class="details validationé">
-                                    <i class="far fa-check-circle"></i>
+                                <div class="detailsprice">35€</div>
+                                <div class="detailsvalidation">
+                                    <div class="detailsicon">
+                                        <i class="far fa-check-circle"></i>
+                                    </div>
                                 </div>
                             </div>
                             <div class="menu__details">
-                                <div class="détails bloc">
+                                <div class="detailsbloc1">
                                     <h3>Velouté de cèpes</h3>
                                     <p>Aux truffes</p>
-                                    <span>20€</span>
                                 </div>
-                                <div class="details validationé">
-                                    <i class="far fa-check-circle"></i>
+                                <div class="detailsprice">20€</div>
+                                <div class="detailsvalidation">
+                                    <div class="detailsicon">
+                                        <i class="far fa-check-circle"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="menu__maincourse">
                             <h2>Plats</h2>
-                            <div class="underline"></div> vbv  
+                            <div class="underline"></div> 
                             <div class="menu__details">
-                                <div class="details bloc1">
+                                <div class="detailsbloc1">
                                     <h3>Poulet rôti aux herbes de Provence</h3>
                                     <p>Et sa crème de truffe</p>
-                                    <span>40€</span>
                                 </div>
-                                <div class="details validation">
-                                    <i class="far fa-check-circle"></i>
+                                <div class="detailsprice">40€</div>
+                                <div class="detailsvalidation">
+                                    <div class="detailsicon">
+                                        <i class="far fa-check-circle"></i>
+                                    </div>
                                 </div>
                             </div>
                             <div class="menu__details">
-                                <div class="détails bloc">
+                                <div class="detailsbloc1">
                                     <h3>Langouste rôtie</h3>
                                     <p>Et ses légumes de saison</p>
-                                    <span>35€</span>
                                 </div>
-                                <div class="details validationé">
-                                    <i class="far fa-check-circle"></i>
+                                <div class="detailsprice">35€</div>
+                                <div class="detailsvalidation">
+                                    <div class="detailsicon">
+                                        <i class="far fa-check-circle"></i>
+                                    </div>
                                 </div>
                             </div>
                             <div class="menu__details">
-                                <div class="détails bloc">
+                                <div class="detailsbloc1">
                                     <h3>Côte de boeuf Angus</h3>
                                     <p>Et sa purée de panais</p>
-                                    <span>44€</span>
                                 </div>
-                                <div class="details validationé">
-                                    <i class="far fa-check-circle"></i>
+                                <div class="detailsprice">44€</div>
+                                <div class="detailsvalidation">
+                                    <div class="detailsicon">
+                                        <i class="far fa-check-circle"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="menu__dessert">
-                            <h2>Plats</h2>
-                            <div class="underline"></div> vbv  
+                            <h2>Desserts</h2>
+                            <div class="underline"></div>
                             <div class="menu__details">
-                                <div class="details bloc1">
+                                <div class="detailsbloc1">
                                     <h3>Farandole de desserts</h3>
                                     <p>Du chef</p>
-                                    <span>18€</span>
                                 </div>
-                                <div class="details validation">
-                                <i class="far fa-check-circle"></i>
+                                <div class="detailsprice">18€</div>
+                                <div class="detailsvalidation">
+                                    <div class="detailsicon">
+                                        <i class="far fa-check-circle"></i>
+                                    </div>
                                 </div>
                             </div>
                             <div class="menu__details">
-                                <div class="détails bloc">
+                                <div class="detailsbloc1">
                                     <h3>Crème brulée</h3>
-                                    <p>Revisité</p>
-                                    <span>22€</span>
+                                    <p>Revisitée</p>
                                 </div>
-                                <div class="details validationé">
-                                    <i class="far fa-check-circle"></i>
+                                <div class="detailsprice">22€</div>
+                                <div class="detailsvalidation">
+                                    <div class="detailsicon">
+                                        <i class="far fa-check-circle"></i>
+                                    </div>
                                 </div>
                             </div>
                             <div class="menu__details">
-                                <div class="détails bloc">
+                                <div class="detailsbloc1">
                                     <h3>Tiramisu</h3>
-                                    <p>À la noisette</p>
-                                    <span>23€</span>
+                                    <p>A la noisette</p>
                                 </div>
-                                <div class="details validationé">
-                                    <i class="far fa-check-circle"></i>
+                                <div class="detailsprice">23€</div>
+                                <div class="detailsvalidation">
+                                    <div class="detailsicon">
+                                        <i class="far fa-check-circle"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -136,16 +157,15 @@
                     <div class="order">
                         <button class="orderbtn">Commander</button>
                     </div>
-                </div>
             </article>
         </main>
         <footer>
             <ul>
-                <li><h1 class="footertitle">ohmyfood</h1></li>
-                <li><a href="#"><i class="footer__icon fas fa-utensils"></i>Proposer un restaurant</a></li>
-                <li><a href="#"><i class="footer__icon fas fa-hands-helping"></i>Devenir Partenaire</a></li>
-                <li><a href="#">Mentions légales</a></li>
-                <li><a href="mailto:ohmyfood@gmail.com">Contact</a></li>
+                <li><h1 class="footer__title">ohmyfood</h1></li>
+                <li><a class="footer__text" href="#"><i class="footer__icon fas fa-utensils"></i>Proposer un restaurant</a></li>
+                <li><a class="footer__text" href="#"><i class="footer__icon fas fa-hands-helping"></i>Devenir Partenaire</a></li>
+                <li><a class="footer__text" href="#">Mentions légales</a></li>
+                <li><a class="footer__text" href="mailto:ohmyfood@gmail.com">Contact</a></li>
             </ul>
         </footer>
     </body>
