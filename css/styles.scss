@@ -9,19 +9,24 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 @media screen and (min-width: 360px) and (max-width: 767px) {
-.headerlogo {
+
+/*--Header--*/
+    .headerlogo {
     font-family: 'Shrikhand', cursive;
-    font-style: italic;
+    font-weight: lighter;
     text-align: center;
     font-size: 2rem;
 }
+
+/*--Body Main Section--*/
+
 .location {
     width: 100%;
     display: flex;
     justify-content: center;
     background-color: #E5E7E9;
     padding: 20px 0 20px 0;
-    border-top: 3px solid #A6ACAF;
+    border-top: 3px solid #D0D3D4;
 }
 .location i {
     padding-right: 20px;
@@ -40,6 +45,12 @@ body {
     padding: 15px 30px;
     border-radius: 30px;
     margin: 10px 0 50px 0;
+    box-shadow: 0 0.5rem 0.5rem #A6ACAF;
+    transition: ease-in-out 0.5s;
+}
+.booking__btn:hover {
+    filter: brightness(120%);
+    box-shadow: 0 0 10px #000, 0 0 30px #777 ;
 }
 .booking__btn a {
     text-decoration: none;
@@ -75,8 +86,15 @@ body {
     font-weight: bold;
     background-color:#F2F3F4 ;
     margin-bottom: 48px;
-    box-shadow: 0 0.5rem 1.2rem #0000003D;
+    box-shadow: 0 0.5rem 0.5rem #E5E7E9;
     transition: ease-in-out 0.3s;
+}
+/*--transition bouton fonctionnement--*/
+.operate li:hover {
+    background-color:  #F4ECF7;
+}
+.operate li:hover i {
+    color: $firstcolor;
 }
 .operate li i {
     color: #A6ACAF;
@@ -109,6 +127,10 @@ body {
     justify-content: space-around;
     width: 100%;
 }
+.container h3, h4, i{
+    color: #1C2833;
+}
+
 .operatecontainer li {
     display: flex;
     text-align: center;
@@ -137,6 +159,8 @@ body {
     height: 330px;
     position: relative;
     text-decoration: none;
+    box-shadow: 0 0.5rem 0.5rem #BDC3C7;
+    border-radius: 20px;
 }
 .card img {
     width: 100%;
@@ -147,11 +171,14 @@ body {
 .restaurants__new {
     position: absolute;
     background-color: #99E2D0;
-    border-radius: 5px;
-    height: 2rem;
+    border-radius: 2px;
+    padding: 0.5rem;
     text-decoration: none;
-    right: 10px;
-    top : 10px;
+    right: 15px;
+    top : 15px;
+    color: #16A085 ;
+    font-weight: bold;
+
 }
 .card__text {
     display: flex;
@@ -162,9 +189,9 @@ body {
     border-radius: 0 0 20px 20px;
 }
 .card__righttext {
-    align-self: center;
+    padding-top: 1rem;
     font-size: 2rem;
-    padding-right: 20px;
+    padding-right: 3rem;
 }
 .card__lefttext {
     text-decoration: none;
@@ -176,10 +203,14 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
 }
+
+/*--Footer--*/ 
+
 footer {
-    background-color: black;
+    background-color:  #1C2833;
     display: flex;
     flex-direction: column;
+    
 }
 .footer__title {
     font-family: 'Shrikhand', cursive;
@@ -192,15 +223,27 @@ footer {
     color: white;
     padding-right: 20px;
 }
+.footerdesign {
+    padding: 0 0 0 20px;
+    line-height: 2;
+    text-decoration: none;
+    list-style: none;
+}
 .footer__text {
     color: white;
     text-decoration: none;
 }
+.footer__icon {
+    font-size:smaller;
+    width: 15px;
+}
 .footer li {
     text-decoration: none;
+    display: flex;
+    align-items: center;
 }
-
     }
+/*--Header Menu--*/
 .header__arrow {
     font-size: 2rem;
     width: 100%;
@@ -232,12 +275,12 @@ footer {
 }
 .menutitle h2 {
     font-family: 'Shrikhand', cursive;
+    font-weight: lighter;
 }
 .menubtn {
-    height: 3rem;
-    width: 5rem;
-    background-color: transparent;
-    border: transparent 0px solid;
+    font-size: 2rem;
+    width: 3rem;
+    padding-bottom: 2rem;
 }
 .menu__starters h2 {
     padding-left: 15px;
@@ -278,6 +321,11 @@ footer {
     margin: 40px 0 60px 0;
     color: white;
     border: hidden;
+    transition: ease-in-out 0.5s;
+}
+.orderbtn:hover{
+    filter: brightness(120%);
+    box-shadow: 0 0 10px #000, 0 0 30px #777 ;
 }
 .order {
     display: flex;
@@ -299,3 +347,48 @@ footer {
     padding-left: 15px;
     margin-bottom: 0;
 }
+/*--Animation Coeur--*/
+.card__righttext{
+    position: relative;
+
+    .fa-heart {
+        position: absolute;
+    }
+   .far:hover {
+       opacity: 1;
+   }
+   .fas {
+       opacity: 0;
+   }
+}
+.fas:hover {
+    opacity: 1;
+    background-image: linear-gradient(to top right, $secondcolor, $firstcolor);   
+    -webkit-background-clip: text;
+    -moz-background-clip: text; 
+    background-clip: text;
+    color: transparent;
+    transition: 0.5s;
+    }
+
+.menubtn {
+    position: relative;
+    .fa-heart{
+        position: absolute;
+    }
+    .far:hover {
+        opacity: 1;
+    }
+    .fas {
+        opacity: 0;
+    }
+}
+.fas:hover {
+    opacity: 1;
+    background-image: linear-gradient(to top right, $secondcolor, $firstcolor);   
+    -webkit-background-clip: text;
+    -moz-background-clip: text; 
+    background-clip: text;
+    color: transparent;
+    transition: 0.5s;
+    }

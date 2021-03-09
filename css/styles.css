@@ -5,12 +5,14 @@ body {
 }
 
 @media screen and (min-width: 360px) and (max-width: 767px) {
+  /*--Header--*/
   .headerlogo {
     font-family: 'Shrikhand', cursive;
-    font-style: italic;
+    font-weight: lighter;
     text-align: center;
     font-size: 2rem;
   }
+  /*--Body Main Section--*/
   .location {
     width: 100%;
     display: -webkit-box;
@@ -21,7 +23,7 @@ body {
             justify-content: center;
     background-color: #E5E7E9;
     padding: 20px 0 20px 0;
-    border-top: 3px solid #A6ACAF;
+    border-top: 3px solid #D0D3D4;
   }
   .location i {
     padding-right: 20px;
@@ -49,6 +51,16 @@ body {
     padding: 15px 30px;
     border-radius: 30px;
     margin: 10px 0 50px 0;
+    -webkit-box-shadow: 0 0.5rem 0.5rem #A6ACAF;
+            box-shadow: 0 0.5rem 0.5rem #A6ACAF;
+    -webkit-transition: ease-in-out 0.5s;
+    transition: ease-in-out 0.5s;
+  }
+  .booking__btn:hover {
+    -webkit-filter: brightness(120%);
+            filter: brightness(120%);
+    -webkit-box-shadow: 0 0 10px #000, 0 0 30px #777;
+            box-shadow: 0 0 10px #000, 0 0 30px #777;
   }
   .booking__btn a {
     text-decoration: none;
@@ -97,10 +109,17 @@ body {
     font-weight: bold;
     background-color: #F2F3F4;
     margin-bottom: 48px;
-    -webkit-box-shadow: 0 0.5rem 1.2rem #0000003D;
-            box-shadow: 0 0.5rem 1.2rem #0000003D;
+    -webkit-box-shadow: 0 0.5rem 0.5rem #E5E7E9;
+            box-shadow: 0 0.5rem 0.5rem #E5E7E9;
     -webkit-transition: ease-in-out 0.3s;
     transition: ease-in-out 0.3s;
+  }
+  /*--transition bouton fonctionnement--*/
+  .operate li:hover {
+    background-color: #F4ECF7;
+  }
+  .operate li:hover i {
+    color: #9356DC;
   }
   .operate li i {
     color: #A6ACAF;
@@ -139,6 +158,9 @@ body {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     width: 100%;
+  }
+  .container h3, h4, i {
+    color: #1C2833;
   }
   .operatecontainer li {
     display: -webkit-box;
@@ -180,6 +202,9 @@ body {
     height: 330px;
     position: relative;
     text-decoration: none;
+    -webkit-box-shadow: 0 0.5rem 0.5rem #BDC3C7;
+            box-shadow: 0 0.5rem 0.5rem #BDC3C7;
+    border-radius: 20px;
   }
   .card img {
     width: 100%;
@@ -191,11 +216,13 @@ body {
   .restaurants__new {
     position: absolute;
     background-color: #99E2D0;
-    border-radius: 5px;
-    height: 2rem;
+    border-radius: 2px;
+    padding: 0.5rem;
     text-decoration: none;
-    right: 10px;
-    top: 10px;
+    right: 15px;
+    top: 15px;
+    color: #16A085;
+    font-weight: bold;
   }
   .card__text {
     display: -webkit-box;
@@ -213,11 +240,9 @@ body {
     border-radius: 0 0 20px 20px;
   }
   .card__righttext {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    padding-top: 1rem;
     font-size: 2rem;
-    padding-right: 20px;
+    padding-right: 3rem;
   }
   .card__lefttext {
     text-decoration: none;
@@ -229,8 +254,9 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
   }
+  /*--Footer--*/
   footer {
-    background-color: black;
+    background-color: #1C2833;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -250,15 +276,32 @@ body {
     color: white;
     padding-right: 20px;
   }
+  .footerdesign {
+    padding: 0 0 0 20px;
+    line-height: 2;
+    text-decoration: none;
+    list-style: none;
+  }
   .footer__text {
     color: white;
     text-decoration: none;
   }
+  .footer__icon {
+    font-size: smaller;
+    width: 15px;
+  }
   .footer li {
     text-decoration: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
+/*--Header Menu--*/
 .header__arrow {
   font-size: 2rem;
   width: 100%;
@@ -301,13 +344,13 @@ body {
 
 .menutitle h2 {
   font-family: 'Shrikhand', cursive;
+  font-weight: lighter;
 }
 
 .menubtn {
-  height: 3rem;
-  width: 5rem;
-  background-color: transparent;
-  border: transparent 0px solid;
+  font-size: 2rem;
+  width: 3rem;
+  padding-bottom: 2rem;
 }
 
 .menu__starters h2 {
@@ -366,6 +409,15 @@ body {
   margin: 40px 0 60px 0;
   color: white;
   border: hidden;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+}
+
+.orderbtn:hover {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+  -webkit-box-shadow: 0 0 10px #000, 0 0 30px #777;
+          box-shadow: 0 0 10px #000, 0 0 30px #777;
 }
 
 .order {
@@ -395,5 +447,60 @@ body {
 .menu__dessert h2 {
   padding-left: 15px;
   margin-bottom: 0;
+}
+
+/*--Animation Coeur--*/
+.card__righttext {
+  position: relative;
+}
+
+.card__righttext .fa-heart {
+  position: absolute;
+}
+
+.card__righttext .far:hover {
+  opacity: 1;
+}
+
+.card__righttext .fas {
+  opacity: 0;
+}
+
+.fas:hover {
+  opacity: 1;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(to top right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.menubtn {
+  position: relative;
+}
+
+.menubtn .fa-heart {
+  position: absolute;
+}
+
+.menubtn .far:hover {
+  opacity: 1;
+}
+
+.menubtn .fas {
+  opacity: 0;
+}
+
+.fas:hover {
+  opacity: 1;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(to top right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 /*# sourceMappingURL=styles.css.map */
