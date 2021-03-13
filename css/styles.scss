@@ -282,37 +282,14 @@ footer {
     width: 3rem;
     padding-bottom: 2rem;
 }
-.menu__starters h2 {
-    padding-left: 15px;
-    margin-bottom: 0;
-}
-.menu__details {
-    background-color: white;
-    padding: 1rem;
+.menu__container{
     display: flex;
-    border-radius: 0.79rem;
-    margin: 1rem 1rem;
-    box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    cursor: pointer;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-.detailsbloc1 {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    flex: 1;
-}
-.detailsbloc1 h3 + p {
+.menu__choice h2 {
     margin: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-.detailsprice {
-    font-weight: bold;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    padding-left: 15px;
 }
 .orderbtn {
     background: linear-gradient(to bottom right, $secondcolor, $firstcolor);
@@ -338,6 +315,7 @@ footer {
     border-top: 3px solid $thirdcolor;
     width : 10%;
     margin-left: 15px;
+
 }
 .menu__maincourse h2 {
     padding-left: 15px;
@@ -392,3 +370,182 @@ footer {
     color: transparent;
     transition: 0.5s;
     }
+
+/*--Animation carte menu--*/
+.fa-check-circle {
+    color: white;
+}
+.cmenu {
+    border-radius: 20px;
+    position: relative;
+    width: 95%;
+    align-items: center;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0 15px 0;
+    &__bloc1 {
+        margin-left: 15px;
+        width: 80%;
+        transform: scaleX(1);
+        transform-origin: left;
+        transition: width 300ms 100ms linear;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        .ctitle {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin: 0 0 4px 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .csubtitle {
+            margin: 0;
+            font-weight: 300;
+            font-size: 0.95rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    .detailsvalidation {
+        display: flex;
+        background-color: $thirdcolor;
+        width: 72px;
+        height: 70px;
+        padding-right: 0;
+        border-radius: 0 20px 20px 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform 300ms 100ms linear;
+        
+        .detailsicon {
+            color: black;
+            font-size: 1.4rem;
+            margin: auto;
+            transform: rotate(0deg);
+            transition: transform 300ms 100ms linear;
+        }
+    }
+    &__price {
+        align-self: flex-end;
+        color: #363636;
+        font-weight: 700;
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+        transform-origin: right;
+        transition: transform 300ms 100ms linear;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    &:hover .cmenu__bloc1 {
+        width: 60%;
+            .csubtitle {
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .ctitle {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+    }
+    &:hover .detailsvalidation {
+        transform: scaleX(1);
+    }
+    &:hover .detailsicon {
+        transform: rotate(360deg);
+    }
+    &:hover .cmenu__price{
+        transform: translateX(-72px)
+    }
+}
+
+/*--Animation apparition carte menu--*/
+$cmenu-num: 10;
+$cmenu-delay-step: 160ms;
+.cmenu {
+    animation: cmenu 1s both cubic-bezier(0, 0, 0.2, 1);
+    @for $i from 1 through $cmenu-num {
+            &--a#{$i} {
+            animation-delay: 400ms + $cmenu-delay-step * $i;
+        }
+    }
+}
+
+@keyframes cmenu {
+    from {
+      opacity: 0;
+      transform: translateY(1rem); }
+    to {
+      opacity: 1;
+      transform: translateY(0); } }
+
+
+/*--Animation loader--*/
+.loadingspinner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    z-index: 1;
+    position: fixed;
+    animation: loading 4s ease-in-out forwards;
+    animation-iteration-count: 1;
+
+    @keyframes loading {
+        from {
+            visibility: visible
+        }
+        to {
+            visibility: hidden;
+        }
+    }
+}
+.spinner {
+    display:inline-block;
+    width:100px;
+    height:100px;
+    background: $thirdcolor;
+    border-radius: 50%;
+    position: relative;
+    margin-left:2%;
+  }
+  .spinner:after, .spinner:before {
+    content: '';
+    display:block;
+    width:100px;
+    height:100px;
+    border-radius:50%;
+  }
+  .spinner-1:after {
+    position:absolute;
+    top: -4px;
+    left: -4px;
+    border:4px solid transparent;
+    border-top-color: $firstcolor;
+    border-bottom-color: $secondcolor;
+    animation: spinny 2s linear infinite;
+  }
+  .spinner-1:before {
+    content: "ohmyfood";
+    color:white;
+    position: absolute;
+    top:36px;
+    left:16px;
+  }
+  @keyframes spinny {
+    0% {
+      transform:rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(45deg) scale(1.2)
+    }
+    100% {
+      transform:rotate(360deg) scale(1);
+    }
+  }

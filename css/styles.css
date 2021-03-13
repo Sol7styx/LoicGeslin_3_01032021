@@ -353,52 +353,20 @@ body {
   padding-bottom: 2rem;
 }
 
-.menu__starters h2 {
-  padding-left: 15px;
-  margin-bottom: 0;
-}
-
-.menu__details {
-  background-color: white;
-  padding: 1rem;
+.menu__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 0.79rem;
-  margin: 1rem 1rem;
-  -webkit-box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
-          box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  cursor: pointer;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.detailsbloc1 {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.detailsbloc1 h3 + p {
+.menu__choice h2 {
   margin: 0;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.detailsprice {
-  font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  padding-left: 15px;
 }
 
 .orderbtn {
@@ -502,5 +470,327 @@ body {
   color: transparent;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+/*--Animation carte menu--*/
+.fa-check-circle {
+  color: white;
+}
+
+.cmenu {
+  border-radius: 20px;
+  position: relative;
+  width: 95%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 15px 0 15px 0;
+}
+
+.cmenu__bloc1 {
+  margin-left: 15px;
+  width: 80%;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: width 300ms 100ms linear;
+  transition: width 300ms 100ms linear;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.cmenu__bloc1 .ctitle {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0 0 4px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cmenu__bloc1 .csubtitle {
+  margin: 0;
+  font-weight: 300;
+  font-size: 0.95rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cmenu .detailsvalidation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #99E2D0;
+  width: 72px;
+  height: 70px;
+  padding-right: 0;
+  border-radius: 0 20px 20px 0;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 300ms 100ms linear;
+  transition: -webkit-transform 300ms 100ms linear;
+  transition: transform 300ms 100ms linear;
+  transition: transform 300ms 100ms linear, -webkit-transform 300ms 100ms linear;
+}
+
+.cmenu .detailsvalidation .detailsicon {
+  color: black;
+  font-size: 1.4rem;
+  margin: auto;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 300ms 100ms linear;
+  transition: -webkit-transform 300ms 100ms linear;
+  transition: transform 300ms 100ms linear;
+  transition: transform 300ms 100ms linear, -webkit-transform 300ms 100ms linear;
+}
+
+.cmenu__price {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  color: #363636;
+  font-weight: 700;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 300ms 100ms linear;
+  transition: -webkit-transform 300ms 100ms linear;
+  transition: transform 300ms 100ms linear;
+  transition: transform 300ms 100ms linear, -webkit-transform 300ms 100ms linear;
+}
+
+.cmenu:hover {
+  cursor: pointer;
+}
+
+.cmenu:hover .cmenu__bloc1 {
+  width: 60%;
+}
+
+.cmenu:hover .cmenu__bloc1 .csubtitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cmenu:hover .cmenu__bloc1 .ctitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cmenu:hover .detailsvalidation {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.cmenu:hover .detailsicon {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.cmenu:hover .cmenu__price {
+  -webkit-transform: translateX(-72px);
+          transform: translateX(-72px);
+}
+
+/*--Animation apparition carte menu--*/
+.cmenu {
+  -webkit-animation: cmenu 1s both cubic-bezier(0, 0, 0.2, 1);
+          animation: cmenu 1s both cubic-bezier(0, 0, 0.2, 1);
+}
+
+.cmenu--a1 {
+  -webkit-animation-delay: 560ms;
+          animation-delay: 560ms;
+}
+
+.cmenu--a2 {
+  -webkit-animation-delay: 720ms;
+          animation-delay: 720ms;
+}
+
+.cmenu--a3 {
+  -webkit-animation-delay: 880ms;
+          animation-delay: 880ms;
+}
+
+.cmenu--a4 {
+  -webkit-animation-delay: 1040ms;
+          animation-delay: 1040ms;
+}
+
+.cmenu--a5 {
+  -webkit-animation-delay: 1200ms;
+          animation-delay: 1200ms;
+}
+
+.cmenu--a6 {
+  -webkit-animation-delay: 1360ms;
+          animation-delay: 1360ms;
+}
+
+.cmenu--a7 {
+  -webkit-animation-delay: 1520ms;
+          animation-delay: 1520ms;
+}
+
+.cmenu--a8 {
+  -webkit-animation-delay: 1680ms;
+          animation-delay: 1680ms;
+}
+
+.cmenu--a9 {
+  -webkit-animation-delay: 1840ms;
+          animation-delay: 1840ms;
+}
+
+.cmenu--a10 {
+  -webkit-animation-delay: 2000ms;
+          animation-delay: 2000ms;
+}
+
+@-webkit-keyframes cmenu {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes cmenu {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+/*--Animation loader--*/
+.loadingspinner {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  z-index: 1;
+  position: fixed;
+  -webkit-animation: loading 4s ease-in-out forwards;
+          animation: loading 4s ease-in-out forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes loading {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
+
+@keyframes loading {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
+
+.spinner {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: #99E2D0;
+  border-radius: 50%;
+  position: relative;
+  margin-left: 2%;
+}
+
+.spinner:after, .spinner:before {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.spinner-1:after {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  border: 4px solid transparent;
+  border-top-color: #9356DC;
+  border-bottom-color: #FF79DA;
+  -webkit-animation: spinny 2s linear infinite;
+          animation: spinny 2s linear infinite;
+}
+
+.spinner-1:before {
+  content: "ohmyfood";
+  color: white;
+  position: absolute;
+  top: 36px;
+  left: 16px;
+}
+
+@-webkit-keyframes spinny {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  50% {
+    -webkit-transform: rotate(45deg) scale(1.2);
+            transform: rotate(45deg) scale(1.2);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes spinny {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  50% {
+    -webkit-transform: rotate(45deg) scale(1.2);
+            transform: rotate(45deg) scale(1.2);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+  }
 }
 /*# sourceMappingURL=styles.css.map */
