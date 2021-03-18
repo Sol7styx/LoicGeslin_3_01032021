@@ -1,6 +1,4 @@
-$firstcolor: #9356DC;
-$secondcolor: #FF79DA;
-$thirdcolor: #99E2D0;
+@import "./utils/variables";
 
 
 body {
@@ -16,6 +14,7 @@ body {
     font-weight: lighter;
     text-align: center;
     font-size: 2rem;
+    margin-bottom: 10px;
 }
 
 /*--Body Main Section Index--*/
@@ -26,7 +25,8 @@ body {
     justify-content: center;
     background-color: #E5E7E9;
     padding: 20px 0 20px 0;
-    border-top: 3px solid #D0D3D4;
+    border-top: 3px solid $mediumgray;
+    font-weight: bolder;
 }
 .location i {
     padding-right: 20px;
@@ -36,16 +36,21 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color:#F2F3F4 ;
+    background-color: $lightgrey;
     text-align: center;
-    padding: 15px 65px 0 65px;
+    padding: 15px 40px 0 40px;
+    h2 {
+        margin: 15px 30px 0 30px;
+        font-weight: bolder;
+        font-size: 1.4rem;
+    }
 }
 .booking__btn {
     background: linear-gradient(to bottom right, $secondcolor, $firstcolor);
     padding: 15px 30px;
     border-radius: 30px;
     margin: 10px 0 50px 0;
-    box-shadow: 0 0.5rem 0.5rem #D0D3D4;
+    box-shadow: 0 0.5rem 0.5rem $mediumgray;
     transition: ease-in-out 0.5s;
 }
 .booking__btn:hover {
@@ -84,16 +89,19 @@ body {
     border-radius: 36px;
     padding: 20px 0;
     font-weight: bold;
-    background-color:#F2F3F4 ;
+    background-color:$lightgrey ;
     margin-bottom: 48px;
     box-shadow: 0 0.5rem 0.5rem #E5E7E9;
     transition: ease-in-out 0.3s;
+    
+    &:hover {
+        background-color:  #F4ECF7;
+        cursor: pointer;
+        box-shadow: 0 0 10px $mediumgray, 0 0 30px $lightgrey ;
+    }
 }
 /*--transition bouton fonctionnement index--*/
-.operate li:hover {
-    background-color:  #F4ECF7;
-    cursor: pointer;
-}
+
 .operate li:hover i {
     color: $firstcolor;
 }
@@ -113,7 +121,7 @@ body {
 }
 .restaurants {
     font-family: 'Roboto', sans-serif;
-    background-color: #F2F3F4;
+    background-color: $lightgrey;
     padding: 0;
     margin: 0;
     display: flex;
@@ -124,7 +132,7 @@ body {
 }
 
 .container h3, h4, i{
-    color: #1C2833;
+    color: $darkgray;
 }
 .article {
     display: flex;
@@ -140,7 +148,7 @@ body {
     height: 330px;
     position: relative;
     text-decoration: none;
-    box-shadow: 0 0.5rem 0.5rem #D0D3D4;
+    box-shadow: 0 0.5rem 0.5rem $mediumgray;
     border-radius: 20px;
 }
 .card img {
@@ -170,29 +178,34 @@ body {
     border-radius: 0 0 20px 20px;
 }
 .card__righttext {
-    
+    -webkit-text-stroke: 1px white;
     font-size: 2rem;
     padding-right: 2rem;
+
 }
 .card .card__righttext{
     padding-top: 1rem;
     padding-right: 4rem;
+    
 }
 .card__lefttext {
     text-decoration: none;
+    h3 {
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+    h4 {
+        font-weight: 300;
+    }
 }
 .card__lefttext >* {
     margin: 10px;
-}
-.card__lefttext h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
 }
 
 /*--Footer commun--*/ 
 
 footer {
-    background-color:  #1C2833;
+    background-color: $darkgray;
     display: flex;
     flex-direction: column;
     
@@ -248,7 +261,7 @@ footer {
 .menu {
     margin-top: -4rem;
     border-radius: 2rem 2rem 0 0;
-    background-color: #F2F3F4;
+    background-color: $lightgrey;
     z-index: 1;
     position: relative;
 }
@@ -280,7 +293,10 @@ footer {
     justify-content: center;
 }
 .menu__choice h2 {
-    margin: 0;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    font-weight: lighter;
+    margin: 20px 0 0 0;
     padding-left: 15px;
 }
 .orderbtn {
@@ -303,7 +319,7 @@ footer {
     justify-content: center;
 }
 .menucontent {
-    background-color: #F2F3F4;
+    background-color: $lightgrey;
 }
 .underline {
     border-top: 3px solid $thirdcolor;
@@ -437,13 +453,12 @@ footer {
 }
 
 /*--Animation apparition carte menu--*/
-$cmenu-num: 10;
-$cmenu-delay-step: 160ms;
+
 .cmenu {
     animation: cmenu 1s both cubic-bezier(0, 0, 0.2, 1);
     @for $i from 1 through $cmenu-num {
             &--a#{$i} {
-            animation-delay: 400ms + $cmenu-delay-step * $i;
+            animation-delay: 300ms + $cmenu-delay-step * $i;
         }
     }
 }
@@ -467,7 +482,7 @@ $cmenu-delay-step: 160ms;
     background-color: white;
     z-index: 1;
     position: fixed;
-    animation: loading 4s ease-in-out forwards;
+    animation: loading 3s ease-in-out forwards;
     animation-iteration-count: 1;
 
     @keyframes loading {
@@ -653,9 +668,6 @@ $cmenu-delay-step: 160ms;
         }
         
     }
-    .restaurants {
-        
-    }
 
 /*--Responsive Desktop Menu Pages--*/
     .menu {
@@ -674,7 +686,7 @@ $cmenu-delay-step: 160ms;
     }
     .dish {
         max-width: 30%;
-        background-color: #F2F3F4;
+        background-color: $lightgrey;
         border-radius: 2rem 2rem 2rem 2rem;
 
     }

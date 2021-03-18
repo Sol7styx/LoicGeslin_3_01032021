@@ -11,6 +11,7 @@ body {
     font-weight: lighter;
     text-align: center;
     font-size: 2rem;
+    margin-bottom: 10px;
   }
   /*--Body Main Section Index--*/
   .location {
@@ -24,6 +25,7 @@ body {
     background-color: #E5E7E9;
     padding: 20px 0 20px 0;
     border-top: 3px solid #D0D3D4;
+    font-weight: bolder;
   }
   .location i {
     padding-right: 20px;
@@ -43,7 +45,12 @@ body {
             align-items: center;
     background-color: #F2F3F4;
     text-align: center;
-    padding: 15px 65px 0 65px;
+    padding: 15px 40px 0 40px;
+  }
+  .booking h2 {
+    margin: 15px 30px 0 30px;
+    font-weight: bolder;
+    font-size: 1.4rem;
   }
   .booking__btn {
     background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
@@ -115,11 +122,13 @@ body {
     -webkit-transition: ease-in-out 0.3s;
     transition: ease-in-out 0.3s;
   }
-  /*--transition bouton fonctionnement index--*/
   .operate li:hover {
     background-color: #F4ECF7;
     cursor: pointer;
+    -webkit-box-shadow: 0 0 10px #D0D3D4, 0 0 30px #F2F3F4;
+            box-shadow: 0 0 10px #D0D3D4, 0 0 30px #F2F3F4;
   }
+  /*--transition bouton fonctionnement index--*/
   .operate li:hover i {
     color: #9356DC;
   }
@@ -152,7 +161,7 @@ body {
     padding: 40px 0 0 14px;
   }
   .container h3, h4, i {
-    color: #1C2833;
+    color: #3C3C3C;
   }
   .article {
     display: -webkit-box;
@@ -215,6 +224,7 @@ body {
     border-radius: 0 0 20px 20px;
   }
   .card__righttext {
+    -webkit-text-stroke: 1px white;
     font-size: 2rem;
     padding-right: 2rem;
   }
@@ -225,16 +235,19 @@ body {
   .card__lefttext {
     text-decoration: none;
   }
+  .card__lefttext h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  .card__lefttext h4 {
+    font-weight: 300;
+  }
   .card__lefttext > * {
     margin: 10px;
   }
-  .card__lefttext h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
   /*--Footer commun--*/
   footer {
-    background-color: #1C2833;
+    background-color: #3C3C3C;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -353,7 +366,10 @@ body {
 }
 
 .menu__choice h2 {
-  margin: 0;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  font-weight: lighter;
+  margin: 20px 0 0 0;
   padding-left: 15px;
 }
 
@@ -575,53 +591,53 @@ body {
 }
 
 .cmenu--a1 {
-  -webkit-animation-delay: 560ms;
-          animation-delay: 560ms;
+  -webkit-animation-delay: 460ms;
+          animation-delay: 460ms;
 }
 
 .cmenu--a2 {
-  -webkit-animation-delay: 720ms;
-          animation-delay: 720ms;
+  -webkit-animation-delay: 620ms;
+          animation-delay: 620ms;
 }
 
 .cmenu--a3 {
-  -webkit-animation-delay: 880ms;
-          animation-delay: 880ms;
+  -webkit-animation-delay: 780ms;
+          animation-delay: 780ms;
 }
 
 .cmenu--a4 {
-  -webkit-animation-delay: 1040ms;
-          animation-delay: 1040ms;
+  -webkit-animation-delay: 940ms;
+          animation-delay: 940ms;
 }
 
 .cmenu--a5 {
-  -webkit-animation-delay: 1200ms;
-          animation-delay: 1200ms;
+  -webkit-animation-delay: 1100ms;
+          animation-delay: 1100ms;
 }
 
 .cmenu--a6 {
-  -webkit-animation-delay: 1360ms;
-          animation-delay: 1360ms;
+  -webkit-animation-delay: 1260ms;
+          animation-delay: 1260ms;
 }
 
 .cmenu--a7 {
-  -webkit-animation-delay: 1520ms;
-          animation-delay: 1520ms;
+  -webkit-animation-delay: 1420ms;
+          animation-delay: 1420ms;
 }
 
 .cmenu--a8 {
-  -webkit-animation-delay: 1680ms;
-          animation-delay: 1680ms;
+  -webkit-animation-delay: 1580ms;
+          animation-delay: 1580ms;
 }
 
 .cmenu--a9 {
-  -webkit-animation-delay: 1840ms;
-          animation-delay: 1840ms;
+  -webkit-animation-delay: 1740ms;
+          animation-delay: 1740ms;
 }
 
 .cmenu--a10 {
-  -webkit-animation-delay: 2000ms;
-          animation-delay: 2000ms;
+  -webkit-animation-delay: 1900ms;
+          animation-delay: 1900ms;
 }
 
 @-webkit-keyframes cmenu {
@@ -666,8 +682,8 @@ body {
   background-color: white;
   z-index: 1;
   position: fixed;
-  -webkit-animation: loading 4s ease-in-out forwards;
-          animation: loading 4s ease-in-out forwards;
+  -webkit-animation: loading 3s ease-in-out forwards;
+          animation: loading 3s ease-in-out forwards;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
 }
