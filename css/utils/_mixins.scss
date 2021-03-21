@@ -1,0 +1,19 @@
+/*--Tablette--*/
+@mixin tb {
+    @media (min-width: #{$screen-tb}) {
+        @content;
+    }
+}
+
+/*--Desktop--*/
+@mixin dt {
+    @media (min-width: #{$screen-dt}) {
+        @content;
+    }
+}
+
+@mixin mb {
+    @media (min-width: #{$screen-mb}) {
+        @content;
+    }
+}

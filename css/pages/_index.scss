@@ -1,0 +1,265 @@
+
+@media screen and (min-width: 320px) {
+
+    /*--Main Section Index--*/
+    main {
+        @include tb {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        @include dt {
+            margin-bottom: 80px;
+        }
+    }
+    .location {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: #E5E7E9;
+        padding: 20px 0 20px 0;
+        border-top: 3px solid $mediumgray;
+        font-weight: bolder;
+        i {
+            padding-right: 20px;
+        }
+        @include tb {
+            width: 100%;
+        }
+    }
+    /*--Fonctionnement--*/
+    .booking {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: $lightgrey;
+        text-align: center;
+        padding: 15px 40px 0 40px;
+        h2 {
+            margin: 15px 30px 0 30px;
+            font-weight: bolder;
+            font-size: 1.4rem;
+        }
+        &__btn {
+            background: linear-gradient(to bottom right, $secondcolor, $firstcolor);
+            padding: 15px 30px;
+            border-radius: 30px;
+            margin: 10px 0 50px 0;
+            box-shadow: 0 0.5rem 0.5rem $mediumgray;
+            transition: ease-in-out 0.5s;
+        }
+        &__btn:hover {
+            filter: brightness(120%);
+            box-shadow: 0 0 10px #000, 0 0 30px #777 ;
+        }
+        &__btn a {
+            text-decoration: none;
+            color: white;
+        }
+        @include tb {
+            width: 100%;
+            padding: 0;
+        }
+    }
+    .operate {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        padding: 40px 32px;
+        h2 {
+            width: 100%;
+            font-weight: bold;
+            font-size: 1.7em;
+            @include tb {
+                width: 100%;
+                font-weight: bold;
+                font-size: 1.7em;
+                padding-left: 15px;
+            }
+        }
+        ol {
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+            @include tb {
+                padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                width: 100%;
+            }
+        }
+        li {
+            max-width: 450px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            width: 95%;
+            border-radius: 36px;
+            padding: 20px 0;
+            font-weight: bold;
+            background-color:$lightgrey ;
+            margin-bottom: 48px;
+            box-shadow: 0 0.5rem 0.5rem #E5E7E9;
+            transition: ease-in-out 0.3s;
+            &:hover {
+                background-color:  #F4ECF7;
+                cursor: pointer;
+                box-shadow: 0 0 10px $mediumgray, 0 0 30px $lightgrey;
+                i {
+                    color: $firstcolor;
+                }
+            }
+            i {
+                color: #A6ACAF;
+                margin: 0 24px;
+                font-weight: 800;
+            }
+            @include tb {
+                display: flex;
+                text-align: center;
+                align-items: center;
+                width: 30%;
+                border-radius: 36px;
+                padding: 20px 0;
+                font-weight: bold;
+                margin-bottom: 48px;
+            }
+        }
+        &__count {
+            background-color: $firstcolor;
+            border-radius: 50%;
+            color: white;
+            text-align: center;
+            font-size: smaller;
+            margin-left: -13px;
+            padding: 5px 9px;
+        }
+        @include tb {
+            display: flex;
+            flex-direction: wrap;
+            justify-content: space-around;
+            padding: 40px 0 40px 0;
+            width: 100%;
+            max-width: 1600px; 
+        }
+        @include dt {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    
+    .restaurants {
+        font-family: 'Roboto', sans-serif;
+        background-color: $lightgrey;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        h2 {
+            padding: 40px 0 0 14px;
+        }
+        .container h3, h4, i {
+            color: $darkgray;
+        }
+        article {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @include tb {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-evenly;
+                width: 100%;
+            }
+        }
+    }
+    .card {
+        display: flex;
+        margin: auto 15px;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+        height: 330px;
+        position: relative;
+        text-decoration: none;
+        box-shadow: 0 0.5rem 0.5rem $mediumgray;
+        border-radius: 20px;
+        img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 20px 20px 0 0;
+            @include tb {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                border-radius: 20px 20px 0 0;
+            }
+        }
+        &__new {
+            position: absolute;
+            background-color: #99E2D0;
+            border-radius: 2px;
+            padding: 0.5rem;
+            text-decoration: none;
+            right: 15px;
+            top : 15px;
+            color: #16A085 ;
+            font-weight: bold;
+        }
+        &__text {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: white;
+            border-radius: 0 0 20px 20px;
+        }
+        &__righttext {
+            -webkit-text-stroke: 1px white;
+            font-size: 2rem;
+            padding-right: 2rem;  
+        }
+        &__lefttext {
+            text-decoration: none;
+            h3 {
+                font-size: 1.4rem;
+                font-weight: bold;
+            }
+            h4 {
+                font-weight: 300;
+            }
+        }
+        &__lefttext >* {
+            margin: 10px;
+        }
+        @include tb {
+            width: 45%;
+            display: flex;
+            margin: auto 15px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            height: 330px;
+            position: relative;
+        }
+        @include dt {
+            box-shadow: 0 1.5em 1.5em #A6ACAF;
+            border-radius: 20px;
+            height: 400px;
+            max-width: 675px;
+            margin-bottom: 60px;
+            img {
+                height: 330px;
+            }
+    
+        }
+    }
+    .card .card__righttext{
+        padding-top: 1rem;
+        padding-right: 4rem;   
+    }
+    }

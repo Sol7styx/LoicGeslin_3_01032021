@@ -1,0 +1,136 @@
+
+/*--Main Menu--*/
+.menu {
+    background-color: $lightgrey;
+    img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    }
+    &__restaurant {
+        width: 100%;
+        margin-top: -4rem;
+        border-radius: 2rem 2rem 0 0;
+        background-color: $lightgrey;
+        z-index: 1;
+        position: relative;
+        @include tb {
+            display: flex;
+        }
+        @include dt {
+            max-width: 1280px;
+            border-radius: 2rem 2rem 2rem 2rem;
+        }
+    .menutitle {  
+        padding: 1rem 2rem 0 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include tb {
+            width: 100%;
+        }
+        h2 {
+            font-family: 'Shrikhand', cursive;
+    font-weight: lighter;
+            @include tb {
+                margin-bottom: 40px;
+                margin-left: 2%;
+            }
+            }   
+        }
+    }
+    &__image {
+        @include tb {
+            width: 100%;
+        }
+        .menuimage {
+            @include tb {
+                max-height: 35rem;
+                width: 100%;
+                object-fit: 100%;
+                height: 50%;
+            } 
+        }
+    }
+    
+    &__choice {
+        @include dt {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 50px;
+        }
+        h2 {
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            font-weight: lighter;
+            margin: 20px 0 0 0;
+            padding-left: 15px;
+        }
+        .dish {
+            @include dt {
+                max-width: 30%;
+            background-color: $lightgrey;
+            border-radius: 2rem 2rem 2rem 2rem;
+            }
+        }
+        
+    }
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    @include dt {
+        background-color: white;
+    }
+}  
+
+.cmenu {
+    box-shadow: 0 0.5rem 0.5rem #D0D3D4;
+    border-radius: 20px;
+    max-width: 650px;
+}
+
+.menubtn {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+.menubtn:hover {
+    cursor: pointer;
+}
+.underline {
+    border-top: 3px solid $thirdcolor;
+    width : 10%;
+    margin-left: 15px;
+}
+.menu__maincourse h2 {
+    padding-left: 15px;
+    margin-bottom: 0;
+}
+.menu__dessert h2 {
+    padding-left: 15px;
+    margin-bottom: 0;
+}
+
+.order {
+    display: flex;
+    justify-content: center;
+    &__btn {
+        font-size: 1.1rem;
+        background: linear-gradient(to bottom right, $secondcolor, $firstcolor);
+        padding: 15px 50px;
+        border-radius: 30px;
+        margin: 40px 0 60px 0;
+        color: white;
+        border: hidden;
+        transition: ease-in-out 0.5s;
+    }
+    &__btn:hover {
+        cursor: pointer;
+        filter: brightness(120%);
+        box-shadow: 0 0 10px #000, 0 0 30px #777 ;
+    }
+}

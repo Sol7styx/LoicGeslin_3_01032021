@@ -1,0 +1,10 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    @include tb {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
