@@ -6,10 +6,12 @@
         display: flex;
         flex-direction: column;
         &__design {
-            padding: 0 0 0 20px;
+            margin: 0;
+            padding: 0 0 30px 20px;
             line-height: 2;
             text-decoration: none;
             list-style: none;
+            background-color: $darkgray;
         }
         &__title {
             font-family: 'Shrikhand', cursive;
@@ -37,6 +39,7 @@
     @include dt {
         flex-direction: row;
         &__design {
+            padding: 0 0 0 20px;
             display: flex;
             flex-direction: row;
             width: 100%;
