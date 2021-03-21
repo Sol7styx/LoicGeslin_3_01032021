@@ -25,71 +25,7 @@
 
 
 /*--Animation menu cards--*/
-.fa-check-circle {
-    color: white;
-}
 .cmenu {
-    border-radius: 20px;
-    position: relative;
-    width: 95%;
-    align-items: center;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    margin: 15px 0 15px 0;
-    &__bloc1 {
-        margin-left: 15px;
-        width: 80%;
-        transform: scaleX(1);
-        transform-origin: left;
-        transition: width 300ms 100ms linear;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        .ctitle {
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin: 0 0 4px 0;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .csubtitle {
-            margin: 0;
-            font-weight: 300;
-            font-size: 0.95rem;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-    }
-    .detailsvalidation {
-        display: flex;
-        background-color: $thirdcolor;
-        width: 72px;
-        height: 70px;
-        padding-right: 0;
-        border-radius: 0 20px 20px 0;
-        transform-origin: right;
-        transform: scaleX(0);
-        transition: transform 300ms 100ms linear;
-        
-        .detailsicon {
-            color: black;
-            font-size: 1.4rem;
-            margin: auto;
-            transform: rotate(0deg);
-            transition: transform 300ms 100ms linear;
-        }
-    }
-    &__price {
-        align-self: flex-end;
-        color: #363636;
-        font-weight: 700;
-        position: absolute;
-        right: 15px;
-        bottom: 15px;
-        transform-origin: right;
-        transition: transform 300ms 100ms linear;
-    }
     &:hover {
         cursor: pointer;
     }
@@ -138,26 +74,18 @@
 
 /*--Animation loader--*/
 .loadingspinner {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    z-index: 1;
-    position: fixed;
-    animation: loading 3s ease-in-out forwards;
-    animation-iteration-count: 1;
+        animation: loading 3s ease-in-out forwards;
+        animation-iteration-count: 1;
+        @keyframes loading {
+            from {
+                visibility: visible
+            }
+            to {
+                visibility: hidden;
+            }
+        }
+    }   
 
-    @keyframes loading {
-        from {
-            visibility: visible
-        }
-        to {
-            visibility: hidden;
-        }
-    }
-}
 .spinner {
     display:inline-block;
     width:100px;
