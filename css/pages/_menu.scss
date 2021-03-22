@@ -21,6 +21,8 @@
             max-width: 1280px;
             border-radius: 2rem 2rem 2rem 2rem;
         }
+
+    /*--Section Menu Content--*/    
     .menutitle {  
         padding: 1rem 2rem 0 1rem;
         display: flex;
@@ -86,8 +88,46 @@
     @include dt {
         background-color: white;
     }
-}  
-
+} 
+/*--Menu Cards--*/ 
+.fa-check-circle {
+    color: white;
+}
+.cmenu {
+    border-radius: 20px;
+    position: relative;
+    width: 95%;
+    align-items: center;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0 15px 0;
+    &__bloc1 {
+        margin-left: 15px;
+        width: 80%;
+        transform: scaleX(1);
+        transform-origin: left;
+        transition: width 300ms 100ms linear;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        .ctitle {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin: 0 0 4px 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .csubtitle {
+            margin: 0;
+            font-weight: 300;
+            font-size: 0.95rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    
+}
 
 .menubtn {
     font-size: 2rem;
@@ -112,7 +152,7 @@
     padding-left: 15px;
     margin-bottom: 0;
 }
-
+/*--Order Button--*/
 .order {
     display: flex;
     justify-content: center;

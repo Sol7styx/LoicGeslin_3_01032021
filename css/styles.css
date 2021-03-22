@@ -49,57 +49,6 @@ body {
 }
 
 /*--Animation menu cards--*/
-.fa-check-circle {
-  color: white;
-}
-
-.cmenu {
-  border-radius: 20px;
-  position: relative;
-  width: 95%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 15px 0 15px 0;
-}
-
-.cmenu__bloc1 {
-  margin-left: 15px;
-  width: 80%;
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  -webkit-transition: width 300ms 100ms linear;
-  transition: width 300ms 100ms linear;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.cmenu__bloc1 .ctitle {
-  font-weight: 600;
-  font-size: 1.1rem;
-  margin: 0 0 4px 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.cmenu__bloc1 .csubtitle {
-  margin: 0;
-  font-weight: 300;
-  font-size: 0.95rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 .cmenu .detailsvalidation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -919,6 +868,7 @@ body {
   background-color: #F2F3F4;
   z-index: 1;
   position: relative;
+  /*--Section Menu Content--*/
 }
 
 @media (min-width: 768px) {
@@ -1033,6 +983,58 @@ body {
   }
 }
 
+/*--Menu Cards--*/
+.fa-check-circle {
+  color: white;
+}
+
+.cmenu {
+  border-radius: 20px;
+  position: relative;
+  width: 95%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 15px 0 15px 0;
+}
+
+.cmenu__bloc1 {
+  margin-left: 15px;
+  width: 80%;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: width 300ms 100ms linear;
+  transition: width 300ms 100ms linear;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.cmenu__bloc1 .ctitle {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0 0 4px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cmenu__bloc1 .csubtitle {
+  margin: 0;
+  font-weight: 300;
+  font-size: 0.95rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .menubtn {
   font-size: 2rem;
   padding-bottom: 2rem;
@@ -1064,6 +1066,7 @@ body {
   margin-bottom: 0;
 }
 
+/*--Order Button--*/
 .order {
   display: -webkit-box;
   display: -ms-flexbox;
