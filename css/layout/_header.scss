@@ -12,14 +12,14 @@
 .header {
     @include mb {
         &__arrow {
-            font-size: 2rem;
+            font-size: 1.4rem;
         width: 100%;
         color: black;
         }
         &__witharrow a {
             position: absolute;
             left: 30px;
-            top: 28px;
+            top: 34px;
         }
     }   
 }
