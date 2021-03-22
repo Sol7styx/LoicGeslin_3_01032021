@@ -42,13 +42,111 @@ body {
   background-image: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(to top right, #FF79DA, #9356DC);
   -webkit-background-clip: text;
-  background-clip: text;
+  -moz-background-clip: text;
   color: transparent;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 /*--Animation menu cards--*/
+.fa-check-circle {
+  color: white;
+}
+
+.cmenu {
+  border-radius: 20px;
+  position: relative;
+  width: 95%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 15px 0 15px 0;
+}
+
+.cmenu__bloc1 {
+  margin-left: 15px;
+  width: 80%;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: width 300ms 100ms linear;
+  transition: width 300ms 100ms linear;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.cmenu__bloc1 .ctitle {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0 0 4px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cmenu__bloc1 .csubtitle {
+  margin: 0;
+  font-weight: 300;
+  font-size: 0.95rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cmenu .detailsvalidation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #99E2D0;
+  width: 72px;
+  height: 70px;
+  padding-right: 0;
+  border-radius: 0 20px 20px 0;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 300ms 100ms linear;
+  transition: -webkit-transform 300ms 100ms linear;
+  transition: transform 300ms 100ms linear;
+  transition: transform 300ms 100ms linear, -webkit-transform 300ms 100ms linear;
+}
+
+.cmenu .detailsvalidation .detailsicon {
+  color: black;
+  font-size: 1.4rem;
+  margin: auto;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 300ms 100ms linear;
+  transition: -webkit-transform 300ms 100ms linear;
+  transition: transform 300ms 100ms linear;
+  transition: transform 300ms 100ms linear, -webkit-transform 300ms 100ms linear;
+}
+
+.cmenu__price {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  color: #363636;
+  font-weight: 700;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 300ms 100ms linear;
+  transition: -webkit-transform 300ms 100ms linear;
+  transition: transform 300ms 100ms linear;
+  transition: transform 300ms 100ms linear, -webkit-transform 300ms 100ms linear;
+}
+
 .cmenu:hover {
   cursor: pointer;
 }
@@ -611,10 +709,6 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: wrap;
-            flex-direction: wrap;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     padding: 40px 0 40px 0;
@@ -883,8 +977,8 @@ body {
   .menu__image .menuimage {
     max-height: 35rem;
     width: 100%;
-    -o-object-fit: 100%;
-       object-fit: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
@@ -937,107 +1031,6 @@ body {
   .menu {
     background-color: white;
   }
-}
-
-.fa-check-circle {
-  color: white;
-}
-
-.cmenu {
-  -webkit-box-shadow: 0 0.5rem 0.5rem #D0D3D4;
-          box-shadow: 0 0.5rem 0.5rem #D0D3D4;
-  max-width: 650px;
-  border-radius: 20px;
-  position: relative;
-  width: 95%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 15px 0 15px 0;
-}
-
-.cmenu__bloc1 {
-  margin-left: 15px;
-  width: 80%;
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  -webkit-transition: width 300ms 100ms linear;
-  transition: width 300ms 100ms linear;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.cmenu__bloc1 .ctitle {
-  font-weight: 600;
-  font-size: 1.1rem;
-  margin: 0 0 4px 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.cmenu__bloc1 .csubtitle {
-  margin: 0;
-  font-weight: 300;
-  font-size: 0.95rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.cmenu .detailsvalidation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #99E2D0;
-  width: 72px;
-  height: 70px;
-  padding-right: 0;
-  border-radius: 0 20px 20px 0;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: -webkit-transform 300ms 100ms linear;
-  transition: -webkit-transform 300ms 100ms linear;
-  transition: transform 300ms 100ms linear;
-  transition: transform 300ms 100ms linear, -webkit-transform 300ms 100ms linear;
-}
-
-.cmenu .detailsvalidation .detailsicon {
-  color: black;
-  font-size: 1.4rem;
-  margin: auto;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  -webkit-transition: -webkit-transform 300ms 100ms linear;
-  transition: -webkit-transform 300ms 100ms linear;
-  transition: transform 300ms 100ms linear;
-  transition: transform 300ms 100ms linear, -webkit-transform 300ms 100ms linear;
-}
-
-.cmenu__price {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  color: #363636;
-  font-weight: 700;
-  position: absolute;
-  right: 15px;
-  bottom: 15px;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: -webkit-transform 300ms 100ms linear;
-  transition: -webkit-transform 300ms 100ms linear;
-  transition: transform 300ms 100ms linear;
-  transition: transform 300ms 100ms linear, -webkit-transform 300ms 100ms linear;
 }
 
 .menubtn {
