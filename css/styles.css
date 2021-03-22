@@ -43,6 +43,7 @@ body {
   background-image: linear-gradient(to top right, #FF79DA, #9356DC);
   -webkit-background-clip: text;
   -moz-background-clip: text;
+  /*--background-clip: text;--*/
   color: transparent;
   -webkit-transition: 0.5s;
   transition: 0.5s;
